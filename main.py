@@ -33,8 +33,34 @@ modele_theta_questions = [
         "question": " Comment réagis-tu face aux situations stressantes ou difficiles?",
         "reponses": ["oui", "non"],
     },
+    {
+        "question": "As-tu ressenti de la fatigue ou de la somnolence récemment",
+        "reponses": ["oui", "non"],
+    },
+    {
+        "question": "As-tu l'impression d'avoir suffisamment dormi ?",
+        "reponses": ["oui", "non"],
+    },
+    {
+        "question": "Suis-tu une routine de sommeil régulière ?",
+        "reponses": ["oui", "non"],
+    },
 ]
 
+modele_gamma_questions = [
+    {
+        "question": "Penses-tu que ces pauses ont un impact sur ta vigilance ?",
+        "reponses": ["oui", "non"],
+    },
+    {
+        "question": "Penses-tu que l'environnement a un impact sur ton niveau d'éveil?",
+        "reponses": ["oui", "non"],
+    },
+    {
+        "questions": "Penses-tu que l'engagement dans une tâche spécifique influence ton niveau d'éveil?",
+        "reponses": ["oui", "non"],
+    },
+]
 themes = [
     {
         "theme": "une phase de sommeil plus profonde",
