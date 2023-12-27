@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-print("")
 
 modele_delta_questions = [
     {
@@ -11,7 +10,20 @@ modele_delta_questions = [
         "reponses": ["oui", "non"],
     },
 ]
-
+modele_beta_questions = [
+    {
+        "question": "Y a-t-il des moments particuliers de la journée où tu te sens plus concentré(e) ou moins concentré(e) ?",
+        "reponses": ["oui", "non"],
+    },
+    {
+        "question": "Penses-tu que la qualité de ton sommeil influence ta vigilance pendant la journée ?",
+        "reponses": ["oui", "non"],
+    },
+    {
+        "question": "As-tu des stratégies spécifiques pour gérer le stress qui ont un effet positif sur ta concentration ?",
+        "reponses": ["oui", "non"],
+    },
+]
 modele_theta_questions = [
     {
         "question": " Y a-t-il des émotions spécifiques que tu ressens fréquemment ces derniers temps ? ",
@@ -26,16 +38,16 @@ modele_theta_questions = [
 themes = [
     {
         "theme": "une phase de sommeil plus profonde",
-        "questions" =  modele_delta_questions,
+        "questions": modele_delta_questions,
+    },
+    {
+        "theme": "La concentration et la vigilance",
+        "question": modele_beta_questions,
     },
     {
         "theme": "améliorer la méditation, la créativité",
-            "questions": 
+        "questions": modele_theta_questions,
     },
-    {
-        "theme": "La relaxation"
-    },
-
 ]
 
 reponse1 = input()
