@@ -97,24 +97,63 @@ themes = [
     {
         "theme": "une phase de sommeil plus profonde",
         "questions": modele_delta_questions,
+        "frequence_nom": "delta",
+        "frequence_range": [0.5, 4],
     },
     {
         "theme": "La concentration et la vigilance",
+        "frequence_nom": "beta",
         "question": modele_beta_questions,
     },
     {
         "theme": "améliorer la méditation, la créativité",
+        "frequence_nom": "theta",
         "questions": modele_theta_questions,
+        "frequence_range": [4, 7],
     },
     {
         "theme": "La relaxation",
+        "frequence_nom": "alpha",
         "questions": modele_alpha_questions,
+        "frequence_range": [7, 13],
+    },
+    {
+        "theme": "Maintein de l'eveil",
+        "frequence_nom": "gamma",
+        "questions": modele_gamma_questions,
+        "frequence_range": [30, 50],
     },
 ]
 
 
-def choisirTheme(arg):
-    for theme in themes:
-        print("- ", theme["theme"])
+def choisirTheme(themes):
+    print("---------------------MENU---------------------")
+    for i in range(len(themes)):
+        print(i + 1, "- ", themes[i]["theme"])
         pass
-    pass
+
+    choix: int = 0
+    while choix > len(themes) or choix < 1:
+        print("- Donner votre choix mon ami: ")
+        choix = int(input())
+    return choix - 1
+
+
+def donnerQuestions(questions):
+    duree = 30
+    for question in questions:
+        print(question["question"])
+        for i in range(len(question["reponses"])):
+            print(i + 1, ": ", question[i]),
+            result = int(input())
+
+        if result == 1:
+            duree += 30
+            pass
+        pass
+
+
+choix = choisirTheme(themes)
+donnerQuestions(themes[choix]["questions"])
+
+# print(themes[choix]["theme"]["questions"])
