@@ -11,6 +11,7 @@ modele_delta_questions: List[Dict] = [
         "reponses": ["oui", "non"],
     },
 ]
+
 modele_beta_questions = [
     {
         "question": "Y a-t-il des moments particuliers de la journée où tu te sens plus concentré(e) ou moins concentré(e) ?",
@@ -25,6 +26,7 @@ modele_beta_questions = [
         "reponses": ["oui", "non"],
     },
 ]
+
 modele_theta_questions = [
     {
         "question": " Y a-t-il des émotions spécifiques que tu ressens fréquemment ces derniers temps ? ",
