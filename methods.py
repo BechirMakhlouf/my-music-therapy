@@ -8,12 +8,11 @@ def choisirTheme(themes) -> int:
 
     choix: int = 0
     while True:
-        print("- Donner votre choix mon ami: ")
+        print("- Donner votre choix: ")
         choix = int(input())
         if choix in range(1, len(themes) + 1):
             break
     return choix - 1
-
 
 def questionner(questionsList: List) -> int:
     duree: int = 30
@@ -34,4 +33,3 @@ def questionner(questionsList: List) -> int:
                 break
         pass
     return duree
-
