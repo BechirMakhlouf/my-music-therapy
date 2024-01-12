@@ -1,4 +1,5 @@
 from typing import Dict, List
+from pysine import sine 
 
 def choisirTheme(themes) -> int:
     print("---------------------|MENU|---------------------")
@@ -29,7 +30,11 @@ def questionner(questionsList: List) -> int:
             if result in range(1, len(reponses) + 1):
                 if result == 1:
                     duree += 30
-                    pass
+                    pass    
                 break
         pass
     return duree
+
+def jouerFrequence(frequence: float, duree: int)-> None: 
+    sine(frequency=frequence, duree=duree)
+    pass

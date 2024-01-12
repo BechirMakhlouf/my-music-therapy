@@ -1,11 +1,13 @@
 #!./bin/python3
 
-from models import *
-from methods import *
-from pysine import *
+import random
+from pysine import sine
+from models import themes
+from methods import choisirTheme, questionner, jouerFrequence
 
 if __name__ == "__main__":
     choix = choisirTheme(themes)
-    duree = questionner(themes[choix]["questions"])
-    # sine(frequency=440.0, duration=1.0)
-    print(duree)
+    theme = themes[choix]
+    frequence = random.uniform(theme["frequence_range"][0], theme["frequence_range"][1])
+    duree = questionner(theme["questions"])
+    jouerFrequence(frequence=frequence, duree=duree)
